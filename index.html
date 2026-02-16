@@ -86,7 +86,7 @@ section:nth-child(even){
 background:#0a192f;
 }
 
-/* Fade-in animation */
+/* Fade Animation */
 .fade-in{
 opacity:0;
 transform:translateY(40px);
@@ -180,7 +180,7 @@ background:#112240;
 <section id="about" class="fade-in">
 <h2>About Me</h2>
 <div class="card">
-I am a Computer Science postgraduate fresher seeking an entry-level opportunity as a Software Tester. I have basic knowledge in Manual Testing, SDLC & STLC concepts, Selenium Automation, and Python. I am eager to learn, improve my technical skills, and grow in a professional environment.
+I am a Computer Science postgraduate fresher seeking an entry-level opportunity as a Software Tester. I have basic knowledge in Manual Testing, SDLC & STLC concepts, Selenium Automation, and Python. I am eager to learn and grow in a professional environment.
 </div>
 </section>
 
@@ -215,10 +215,14 @@ View Live Project
 
 <div class="card">
 Digital Sector Safeguards – Cyber Security
+<br>
+<a href="https://drive.google.com/file/d/1JCJ8Lwr_reVYVvP1EdTaiHBEkwWCAVyG/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
 </div>
 
 <div class="card">
 Artificial Intelligence for Smart Cities – KPR College
+<br>
+<a href="https://drive.google.com/file/d/1RhTbsaa9wtFQHif0qR5Qu903SndRHvox/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
 </div>
 
 </section>
@@ -228,18 +232,26 @@ Artificial Intelligence for Smart Cities – KPR College
 
 <div class="card">
 Cloud Computing – NPTEL
+<br>
+<a href="https://drive.google.com/file/d/1JZBzdx7rBHB2AYKTH167oto7GhpVNu45/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
 </div>
 
 <div class="card">
 Operating Systems – NPTEL
+<br>
+<a href="https://drive.google.com/file/d/1y2Wwb8_diNy9T400_TQib5RwOcV-2x6g/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
 </div>
 
 <div class="card">
 Software Testing Internship Certificate
+<br>
+<a href="https://drive.google.com/file/d/1uNwErE1scouqQXDU0se5-CwX-DbrJcK1/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
 </div>
 
 <div class="card">
 Ayotta Technologies Internship Certificate
+<br>
+<a href="https://drive.google.com/file/d/1KcVYIQKrxu8_UHBTwmABSqPVhwPYhKqA/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
 </div>
 
 </section>
@@ -248,18 +260,9 @@ Ayotta Technologies Internship Certificate
 <h2>Contact</h2>
 <div class="card">
 📍 Chennai <br><br>
-
-📧 <a href="mailto:akshayaashree2@gmail.com" style="color:#64ffda;">
-akshayaashree2@gmail.com
-</a><br><br>
-
-📞 <a href="tel:9655411975" style="color:#64ffda;">
-9655411975
-</a><br><br>
-
-🔗 <a href="https://www.linkedin.com/in/Akshayaa-shree-042579292" target="_blank" style="color:#64ffda;">
-LinkedIn Profile
-</a>
+📧 <a href="mailto:akshayaashree2@gmail.com" style="color:#64ffda;">akshayaashree2@gmail.com</a><br><br>
+📞 <a href="tel:9655411975" style="color:#64ffda;">9655411975</a><br><br>
+🔗 <a href="https://www.linkedin.com/in/Akshayaa-shree-042579292" target="_blank" style="color:#64ffda;">LinkedIn Profile</a>
 </div>
 </section>
 
@@ -298,17 +301,13 @@ typeEffect();
 /* Scroll Fade Animation */
 const faders = document.querySelectorAll('.fade-in');
 
-const appearOptions = {
-threshold: 0.2
-};
-
 const appearOnScroll = new IntersectionObserver(function(entries, observer) {
 entries.forEach(entry => {
 if (!entry.isIntersecting) return;
 entry.target.classList.add('show');
 observer.unobserve(entry.target);
 });
-}, appearOptions);
+}, { threshold: 0.2 });
 
 faders.forEach(fader => {
 appearOnScroll.observe(fader);
