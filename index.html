@@ -5,102 +5,170 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akshayaa Shree | Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-header {
-    background: #0f172a;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+body{
+    background:linear-gradient(135deg,#1e3a8a,#7c3aed);
+    color:white;
+    overflow-x:hidden;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 36px;
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 50px;
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.3);
+    backdrop-filter:blur(10px);
 }
 
-section {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: auto;
+nav h2{
+    font-weight:600;
 }
 
-h2 {
-    color: #0f172a;
-    border-bottom: 2px solid #0f172a;
-    display: inline-block;
-    margin-bottom: 20px;
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
 }
 
-footer {
-    background: #0f172a;
-    color: white;
-    text-align: center;
-    padding: 15px;
+nav a:hover{
+    color:#facc15;
 }
-button {
-    padding: 10px 20px;
-    background: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
-button:hover {
-    background: #1e40af;
+
+.hero h1{
+    font-size:50px;
+    animation:fadeIn 2s ease-in-out;
+}
+
+.hero p{
+    font-size:20px;
+    margin-top:10px;
+    animation:fadeIn 3s ease-in-out;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#facc15;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+/* Sections */
+section{
+    padding:100px 50px;
+    text-align:center;
+}
+
+.card{
+    background:rgba(255,255,255,0.1);
+    margin:20px auto;
+    padding:20px;
+    width:80%;
+    border-radius:15px;
+    backdrop-filter:blur(5px);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* Animation */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.4);
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Akshayaa Shree</h1>
-    <p>M.Sc Computer Science | Aspiring Software Developer</p>
-</header>
+<nav>
+    <h2>Akshayaa</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+    </ul>
+</nav>
 
-<section>
+<div class="hero">
+    <h1>Hello, I'm Akshayaa Shree 👋</h1>
+    <p>M.Sc Computer Science | Web Developer | ML Enthusiast</p>
+    <button onclick="scrollToSection()">Explore More</button>
+</div>
+
+<section id="about">
     <h2>About Me</h2>
     <div class="card">
-        <p>I am a passionate Computer Science postgraduate student with strong interest in Web Development and Machine Learning. I aim to build scalable and user-friendly applications.</p>
+        Passionate developer interested in Web Development, AI and building impactful solutions.
     </div>
+</section>
 
+<section id="skills">
     <h2>Skills</h2>
-    <div class="card">
-        <p>HTML | CSS | JavaScript | React | Python | Machine Learning</p>
-    </div>
+    <div class="card">HTML | CSS | JavaScript | React</div>
+    <div class="card">Python | Machine Learning | APIs</div>
+</section>
 
+<section id="projects">
     <h2>Projects</h2>
     <div class="card">
-        <h3>Crowd Prediction in Public Transport</h3>
-        <p>Predicting crowd levels using Weather API and Social Media data.</p>
-        <button onclick="alert('Project link add pannunga!')">View Project</button>
-    </div>
-
-    <h2>Contact</h2>
-    <div class="card">
-        <p>Email: yourmail@gmail.com</p>
-        <p>LinkedIn: linkedin.com/in/yourprofile</p>
-        <p>GitHub: github.com/yourusername</p>
+        <h3>Crowd Prediction System</h3>
+        Predicting public transport crowd using Weather API & Social Media data.
     </div>
 </section>
 
 <footer>
     © 2026 Akshayaa Shree | Portfolio
 </footer>
+
+<script>
+function scrollToSection(){
+    document.getElementById("about").scrollIntoView({behavior:"smooth"});
+}
+</script>
 
 </body>
 </html>
