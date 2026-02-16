@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akshayaa Shree | Software Testing & ML Portfolio</title>
+<title>Akshayaa Shree | Software Tester Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -16,10 +16,10 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(-45deg,#1e3a8a,#7c3aed,#0f172a,#2563eb);
+background:linear-gradient(-45deg,#89f7fe,#66a6ff,#a18cd1,#fbc2eb);
 background-size:400% 400%;
-animation:gradient 10s ease infinite;
-color:white;
+animation:gradient 12s ease infinite;
+color:#222;
 overflow-x:hidden;
 }
 
@@ -35,18 +35,19 @@ width:100%;
 display:flex;
 justify-content:space-between;
 padding:20px 50px;
-background:rgba(0,0,0,0.3);
+background:rgba(255,255,255,0.5);
 backdrop-filter:blur(10px);
 }
 
 nav a{
-color:white;
+color:#222;
 text-decoration:none;
 margin-left:20px;
+font-weight:500;
 }
 
 nav a:hover{
-color:#facc15;
+color:#ff4e50;
 }
 
 .hero{
@@ -60,28 +61,32 @@ padding:20px;
 }
 
 .hero img{
-width:160px;
-height:160px;
+width:170px;
+height:170px;
 border-radius:50%;
-border:4px solid white;
+border:5px solid white;
 margin-bottom:20px;
+box-shadow:0px 10px 25px rgba(0,0,0,0.2);
 animation:float 3s ease-in-out infinite;
+object-fit:cover;
 }
 
 @keyframes float{
 0%{transform:translateY(0px);}
-50%{transform:translateY(-15px);}
+50%{transform:translateY(-12px);}
 100%{transform:translateY(0px);}
 }
 
 .hero h1{
-font-size:40px;
+font-size:42px;
+color:#111;
 }
 
 .typing{
-font-size:20px;
+font-size:22px;
 margin-top:10px;
-color:#facc15;
+color:#ff4e50;
+font-weight:600;
 }
 
 section{
@@ -90,25 +95,25 @@ text-align:center;
 }
 
 .card{
-background:rgba(255,255,255,0.1);
-padding:25px;
-margin:20px auto;
-width:80%;
-border-radius:15px;
-backdrop-filter:blur(8px);
+background:rgba(255,255,255,0.7);
+padding:30px;
+margin:25px auto;
+width:85%;
+border-radius:18px;
+box-shadow:0px 10px 30px rgba(0,0,0,0.1);
 transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 }
 
 .button {
 display:inline-block;
 padding:12px 25px;
 margin-top:15px;
-background:#facc15;
-color:#0f172a;
+background:#ff4e50;
+color:white;
 font-weight:bold;
 border-radius:25px;
 text-decoration:none;
@@ -116,40 +121,14 @@ transition:0.3s;
 }
 
 .button:hover{
-transform:scale(1.1);
-}
-
-.skill-bar{
-margin:15px 0;
-text-align:left;
-}
-
-.skill-bar span{
-font-size:14px;
-}
-
-.progress{
-height:8px;
-background:white;
-border-radius:10px;
-overflow:hidden;
-}
-
-.progress div{
-height:8px;
-background:#facc15;
-width:0;
-animation:load 2s forwards;
-}
-
-@keyframes load{
-to{width:90%;}
+transform:scale(1.05);
 }
 
 footer{
 text-align:center;
 padding:20px;
-background:rgba(0,0,0,0.4);
+background:rgba(255,255,255,0.6);
+font-weight:500;
 }
 </style>
 </head>
@@ -162,13 +141,15 @@ background:rgba(0,0,0,0.4);
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
+<a href="#internships">Internships</a>
 <a href="#certificates">Certificates</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
 <div class="hero">
-<img src="https://i.imgur.com/6VBx3io.png" alt="profile">
+<!-- Replace below image link with your photo link -->
+<img src="YOUR_PHOTO_LINK_HERE" alt="profile">
 <h1>Akshayaa Shree</h1>
 <div class="typing" id="typing"></div>
 <a href="Akshayaa_Shree_Resume.pdf" class="button" download>Download Resume</a>
@@ -177,52 +158,42 @@ background:rgba(0,0,0,0.4);
 <section id="about">
 <h2>About Me</h2>
 <div class="card">
-Postgraduate Computer Science student with strong interest in Software Testing, Selenium Automation, Python and Machine Learning.
+I am a dedicated postgraduate Computer Science student aspiring to build a career as a Software Tester. I have hands-on experience in Manual Testing, Selenium Automation, test case writing and defect reporting. I am passionate about ensuring software quality, improving system reliability, and continuously enhancing my technical skills in a professional environment.
 </div>
 </section>
 
 <section id="skills">
 <h2>Technical Skills</h2>
 <div class="card">
-
-<div class="skill-bar">
-<span>Selenium Automation</span>
-<div class="progress"><div></div></div>
-</div>
-
-<div class="skill-bar">
-<span>Python</span>
-<div class="progress"><div style="animation-delay:0.5s"></div></div>
-</div>
-
-<div class="skill-bar">
-<span>Power BI</span>
-<div class="progress"><div style="animation-delay:1s"></div></div>
-</div>
-
-<div class="skill-bar">
-<span>Machine Learning</span>
-<div class="progress"><div style="animation-delay:1.5s"></div></div>
-</div>
-
+Manual Testing • SDLC & STLC • Selenium Automation • Python • Test Case Writing • Bug Reporting • Power BI
 </div>
 </section>
 
 <section id="projects">
 <h2>Projects</h2>
+<div class="card">
+<h3>MSc Project – Public Transportation Crowd Prediction</h3>
+Developed a web-based application integrating real-time APIs.
+<br>
+<a href="https://crowdpredictions1.netlify.app/" target="_blank" class="button">View Live Project</a>
+</div>
+</section>
+
+<section id="internships">
+<h2>Internships</h2>
 
 <div class="card">
-<h3>📌 MSc Project: Public Transportation Crowd Prediction</h3>
-Predicts crowd levels using Weather & Location APIs.
+<h3>Software Testing Internship</h3>
+Worked on Selenium automation platform, executed automation scripts and assisted in documentation.
 <br>
-<a href="https://crowdpredictions1.netlify.app/" target="_blank" class="button">
-View Live Project
-</a>
+<a href="https://drive.google.com/file/d/1uNwErE1scouqQXDU0se5-CwX-DbrJcK1/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
 </div>
 
 <div class="card">
-<h3>Liver Cancer Prediction System</h3>
-Healthcare prediction system with validated data & analysis.
+<h3>Data Science Internship – Ayotta Technologies</h3>
+Worked on predictive model implementation and data handling.
+<br>
+<a href="https://drive.google.com/file/d/1KcVYIQKrxu8_UHBTwmABSqPVhwPYhKqA/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
 </div>
 
 </section>
@@ -231,15 +202,27 @@ Healthcare prediction system with validated data & analysis.
 <h2>Certifications</h2>
 
 <div class="card">
-Software Testing Internship Certificate
+Cloud Computing – NPTEL
+<br>
+<a href="https://drive.google.com/file/d/1JZBzdx7rBHB2AYKTH167oto7GhpVNu45/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
 </div>
 
 <div class="card">
-NPTEL – Cloud Computing (71%) & Operating Systems (60%)
+Operating Systems – NPTEL
+<br>
+<a href="https://drive.google.com/file/d/1y2Wwb8_diNy9T400_TQib5RwOcV-2x6g/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
 </div>
 
 <div class="card">
-Python Basics Certification & Conference Presentations
+International Conference – Cyber Security
+<br>
+<a href="https://drive.google.com/file/d/1JCJ8Lwr_reVYVvP1EdTaiHBEkwWCAVyG/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
+</div>
+
+<div class="card">
+KPR Conference Presentation
+<br>
+<a href="https://drive.google.com/file/d/1RhTbsaa9wtFQHif0qR5Qu903SndRHvox/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
 </div>
 
 </section>
@@ -247,34 +230,31 @@ Python Basics Certification & Conference Presentations
 <section id="contact">
 <h2>Contact</h2>
 <div class="card">
-📍 Coimbatore <br><br>
+📍 Chennai <br><br>
 
-📧 <a href="mailto:akshayaashree2@gmail.com" style="color:#facc15;">
+📧 <a href="mailto:akshayaashree2@gmail.com">
 akshayaashree2@gmail.com
-</a> <br><br>
+</a><br><br>
 
-📞 <a href="tel:9655411975" style="color:#facc15;">
+📞 <a href="tel:9655411975">
 9655411975
-</a> <br><br>
+</a><br><br>
 
-🔗 <a href="https://www.linkedin.com/in/Akshayaa-shree-042579292"
-target="_blank" style="color:#facc15;">
+🔗 <a href="https://www.linkedin.com/in/Akshayaa-shree-042579292" target="_blank">
 LinkedIn Profile
 </a>
-
 </div>
 </section>
 
 <footer>
-© 2026 Akshayaa Shree | Software Testing & ML Portfolio
+© 2026 Akshayaa Shree | Software Tester Portfolio
 </footer>
 
 <script>
 const textArray = [
-"Software Testing Enthusiast",
-"Selenium Automation Professional",
-"Python Developer",
-"Machine Learning Explorer"
+"Software Tester",
+"Selenium Automation",
+"Manual Testing Specialist"
 ];
 
 let index = 0;
@@ -283,7 +263,6 @@ let isDeleting = false;
 
 function typeEffect(){
  if(index >= textArray.length) index = 0;
-
  let currentText = textArray[index];
 
  if(!isDeleting){
