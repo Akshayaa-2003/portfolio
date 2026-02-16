@@ -16,40 +16,33 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(-45deg,#89f7fe,#66a6ff,#a18cd1,#fbc2eb);
-background-size:400% 400%;
-animation:gradient 12s ease infinite;
-color:#222;
+background:#0a192f;
+color:white;
 overflow-x:hidden;
 }
 
-@keyframes gradient{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-
+/* NAVBAR */
 nav{
 position:fixed;
 width:100%;
 display:flex;
 justify-content:space-between;
 padding:20px 50px;
-background:rgba(255,255,255,0.5);
-backdrop-filter:blur(10px);
+background:#112240;
 }
 
 nav a{
-color:#222;
+color:white;
 text-decoration:none;
 margin-left:20px;
 font-weight:500;
 }
 
 nav a:hover{
-color:#ff4e50;
+color:#64ffda;
 }
 
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
@@ -58,62 +51,62 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+background:#0a192f;
 }
 
 .hero img{
-width:170px;
-height:170px;
+width:180px;
+height:180px;
 border-radius:50%;
-border:5px solid white;
+border:4px solid #64ffda;
 margin-bottom:20px;
-box-shadow:0px 10px 25px rgba(0,0,0,0.2);
-animation:float 3s ease-in-out infinite;
+box-shadow:0px 10px 30px rgba(0,0,0,0.4);
 object-fit:cover;
 }
 
-@keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-12px);}
-100%{transform:translateY(0px);}
-}
-
 .hero h1{
-font-size:42px;
-color:#111;
+font-size:44px;
+color:#ffffff;
 }
 
 .typing{
 font-size:22px;
 margin-top:10px;
-color:#ff4e50;
+color:#64ffda;
 font-weight:600;
 }
 
+/* SECTIONS */
 section{
 padding:80px 40px;
 text-align:center;
+background:#112240;
+}
+
+section:nth-child(even){
+background:#0a192f;
 }
 
 .card{
-background:rgba(255,255,255,0.7);
+background:#1c2b45;
 padding:30px;
 margin:25px auto;
 width:85%;
-border-radius:18px;
-box-shadow:0px 10px 30px rgba(0,0,0,0.1);
-transition:0.4s;
+border-radius:15px;
+box-shadow:0px 8px 25px rgba(0,0,0,0.3);
+transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-5px);
 }
 
-.button {
+.button{
 display:inline-block;
-padding:12px 25px;
+padding:10px 22px;
 margin-top:15px;
-background:#ff4e50;
-color:white;
+background:#64ffda;
+color:#0a192f;
 font-weight:bold;
 border-radius:25px;
 text-decoration:none;
@@ -121,14 +114,31 @@ transition:0.3s;
 }
 
 .button:hover{
-transform:scale(1.05);
+background:white;
 }
 
+/* SKILLS ALIGNMENT */
+.skills-list{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:15px;
+}
+
+.skill-item{
+background:#0a192f;
+padding:10px 18px;
+border-radius:20px;
+border:1px solid #64ffda;
+font-size:14px;
+}
+
+/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
-background:rgba(255,255,255,0.6);
-font-weight:500;
+background:#112240;
 }
 </style>
 </head>
@@ -148,8 +158,7 @@ font-weight:500;
 </nav>
 
 <div class="hero">
-<!-- Replace below image link with your photo link -->
-<img src="YOUR_PHOTO_LINK_HERE" alt="profile">
+<img src="image2003.jpeg" alt="profile">
 <h1>Akshayaa Shree</h1>
 <div class="typing" id="typing"></div>
 <a href="Akshayaa_Shree_Resume.pdf" class="button" download>Download Resume</a>
@@ -158,14 +167,22 @@ font-weight:500;
 <section id="about">
 <h2>About Me</h2>
 <div class="card">
-I am a dedicated postgraduate Computer Science student aspiring to build a career as a Software Tester. I have hands-on experience in Manual Testing, Selenium Automation, test case writing and defect reporting. I am passionate about ensuring software quality, improving system reliability, and continuously enhancing my technical skills in a professional environment.
+I am a postgraduate Computer Science student aspiring to work as a Software Tester. I have hands-on experience in Manual Testing, Selenium Automation, SDLC & STLC processes, test case writing and bug reporting. I am passionate about improving software quality and ensuring reliable system performance.
 </div>
 </section>
 
 <section id="skills">
 <h2>Technical Skills</h2>
 <div class="card">
-Manual Testing • SDLC & STLC • Selenium Automation • Python • Test Case Writing • Bug Reporting • Power BI
+<div class="skills-list">
+<div class="skill-item">Manual Testing</div>
+<div class="skill-item">SDLC & STLC</div>
+<div class="skill-item">Selenium Automation</div>
+<div class="skill-item">Python</div>
+<div class="skill-item">Test Case Writing</div>
+<div class="skill-item">Bug Reporting</div>
+<div class="skill-item">Power BI</div>
+</div>
 </div>
 </section>
 
@@ -175,7 +192,9 @@ Manual Testing • SDLC & STLC • Selenium Automation • Python • Test Case 
 <h3>MSc Project – Public Transportation Crowd Prediction</h3>
 Developed a web-based application integrating real-time APIs.
 <br>
-<a href="https://crowdpredictions1.netlify.app/" target="_blank" class="button">View Live Project</a>
+<a href="https://crowdpredictions1.netlify.app/" target="_blank" class="button">
+View Live Project
+</a>
 </div>
 </section>
 
@@ -184,14 +203,14 @@ Developed a web-based application integrating real-time APIs.
 
 <div class="card">
 <h3>Software Testing Internship</h3>
-Worked on Selenium automation platform, executed automation scripts and assisted in documentation.
+Worked on Selenium automation platform and executed automation scripts.
 <br>
 <a href="https://drive.google.com/file/d/1uNwErE1scouqQXDU0se5-CwX-DbrJcK1/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
 </div>
 
 <div class="card">
-<h3>Data Science Internship – Ayotta Technologies</h3>
-Worked on predictive model implementation and data handling.
+<h3>Ayotta Technologies Internship</h3>
+Worked on predictive system implementation and data handling.
 <br>
 <a href="https://drive.google.com/file/d/1KcVYIQKrxu8_UHBTwmABSqPVhwPYhKqA/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
 </div>
@@ -213,18 +232,6 @@ Operating Systems – NPTEL
 <a href="https://drive.google.com/file/d/1y2Wwb8_diNy9T400_TQib5RwOcV-2x6g/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
 </div>
 
-<div class="card">
-International Conference – Cyber Security
-<br>
-<a href="https://drive.google.com/file/d/1JCJ8Lwr_reVYVvP1EdTaiHBEkwWCAVyG/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
-</div>
-
-<div class="card">
-KPR Conference Presentation
-<br>
-<a href="https://drive.google.com/file/d/1RhTbsaa9wtFQHif0qR5Qu903SndRHvox/view?usp=drivesdk" target="_blank" class="button">View Certificate</a>
-</div>
-
 </section>
 
 <section id="contact">
@@ -232,15 +239,15 @@ KPR Conference Presentation
 <div class="card">
 📍 Chennai <br><br>
 
-📧 <a href="mailto:akshayaashree2@gmail.com">
+📧 <a href="mailto:akshayaashree2@gmail.com" style="color:#64ffda;">
 akshayaashree2@gmail.com
 </a><br><br>
 
-📞 <a href="tel:9655411975">
+📞 <a href="tel:9655411975" style="color:#64ffda;">
 9655411975
 </a><br><br>
 
-🔗 <a href="https://www.linkedin.com/in/Akshayaa-shree-042579292" target="_blank">
+🔗 <a href="https://www.linkedin.com/in/Akshayaa-shree-042579292" target="_blank" style="color:#64ffda;">
 LinkedIn Profile
 </a>
 </div>
@@ -253,8 +260,8 @@ LinkedIn Profile
 <script>
 const textArray = [
 "Software Tester",
-"Selenium Automation",
-"Manual Testing Specialist"
+"Selenium Automation Specialist",
+"Manual Testing Professional"
 ];
 
 let index = 0;
