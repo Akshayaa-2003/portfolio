@@ -3,121 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akshayaa Shree | Portfolio</title>
+<title>Akshayaa Shree | Software Testing & ML Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:linear-gradient(135deg,#1e3a8a,#7c3aed);
-    color:white;
-    overflow-x:hidden;
+background:linear-gradient(-45deg,#1e3a8a,#7c3aed,#0f172a,#2563eb);
+background-size:400% 400%;
+animation:gradient 10s ease infinite;
+color:white;
+overflow-x:hidden;
 }
 
-/* Navbar */
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
 nav{
-    display:flex;
-    justify-content:space-between;
-    padding:20px 50px;
-    position:fixed;
-    width:100%;
-    background:rgba(0,0,0,0.3);
-    backdrop-filter:blur(10px);
-}
-
-nav h2{
-    font-weight:600;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:20px;
+position:fixed;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:20px 50px;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
 }
 
 nav a{
-    text-decoration:none;
-    color:white;
-    transition:0.3s;
+color:white;
+text-decoration:none;
+margin-left:20px;
 }
 
-nav a:hover{
-    color:#facc15;
-}
-
-/* Hero Section */
 .hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero img{
+width:160px;
+height:160px;
+border-radius:50%;
+border:4px solid white;
+margin-bottom:20px;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0px);}
 }
 
 .hero h1{
-    font-size:50px;
-    animation:fadeIn 2s ease-in-out;
+font-size:40px;
 }
 
-.hero p{
-    font-size:20px;
-    margin-top:10px;
-    animation:fadeIn 3s ease-in-out;
+.typing{
+font-size:20px;
+margin-top:10px;
+color:#facc15;
 }
 
-button{
-    margin-top:20px;
-    padding:12px 25px;
-    border:none;
-    border-radius:25px;
-    background:#facc15;
-    cursor:pointer;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-button:hover{
-    transform:scale(1.1);
-}
-
-/* Sections */
 section{
-    padding:100px 50px;
-    text-align:center;
+padding:80px 40px;
+text-align:center;
 }
 
 .card{
-    background:rgba(255,255,255,0.1);
-    margin:20px auto;
-    padding:20px;
-    width:80%;
-    border-radius:15px;
-    backdrop-filter:blur(5px);
-    transition:0.4s;
+background:rgba(255,255,255,0.1);
+padding:25px;
+margin:20px auto;
+width:80%;
+border-radius:15px;
+backdrop-filter:blur(8px);
+transition:0.4s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
+transform:translateY(-10px);
 }
 
-/* Animation */
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
+.button {
+display:inline-block;
+padding:12px 25px;
+margin-top:15px;
+background:#facc15;
+color:#0f172a;
+font-weight:bold;
+border-radius:25px;
+text-decoration:none;
+transition:0.3s;
+}
+.button:hover{
+transform:scale(1.1);
+}
+
+.skill-bar{
+margin:15px 0;
+text-align:left;
+}
+
+.skill-bar span{
+font-size:14px;
+}
+
+.progress{
+height:8px;
+background:white;
+border-radius:10px;
+overflow:hidden;
+}
+
+.progress div{
+height:8px;
+background:#facc15;
+width:0;
+animation:load 2s forwards;
+}
+
+@keyframes load{
+to{width:90%;}
 }
 
 footer{
-    text-align:center;
-    padding:20px;
-    background:rgba(0,0,0,0.4);
+text-align:center;
+padding:20px;
+background:rgba(0,0,0,0.4);
 }
 </style>
 </head>
@@ -125,49 +152,122 @@ footer{
 <body>
 
 <nav>
-    <h2>Akshayaa</h2>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-    </ul>
+<div><b>Akshayaa Shree</b></div>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
 <div class="hero">
-    <h1>Hello, I'm Akshayaa Shree 👋</h1>
-    <p>M.Sc Computer Science | Web Developer | ML Enthusiast</p>
-    <button onclick="scrollToSection()">Explore More</button>
+<img src="https://i.imgur.com/6VBx3io.png" alt="profile">
+<h1>Akshayaa Shree</h1>
+<div class="typing" id="typing"></div>
 </div>
 
 <section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-        Passionate developer interested in Web Development, AI and building impactful solutions.
-    </div>
+<h2>About Me</h2>
+<div class="card">
+Postgraduate Computer Science student with strong interest in Software Testing, Selenium Automation, Python and Machine Learning. Passionate about building smart and scalable solutions.
+</div>
 </section>
 
 <section id="skills">
-    <h2>Skills</h2>
-    <div class="card">HTML | CSS | JavaScript | React</div>
-    <div class="card">Python | Machine Learning | APIs</div>
+<h2>Technical Skills</h2>
+<div class="card">
+
+<div class="skill-bar">
+<span>Selenium Automation</span>
+<div class="progress"><div></div></div>
+</div>
+
+<div class="skill-bar">
+<span>Python</span>
+<div class="progress"><div style="animation-delay:0.5s"></div></div>
+</div>
+
+<div class="skill-bar">
+<span>Power BI</span>
+<div class="progress"><div style="animation-delay:1s"></div></div>
+</div>
+
+<div class="skill-bar">
+<span>Machine Learning</span>
+<div class="progress"><div style="animation-delay:1.5s"></div></div>
+</div>
+
+</div>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-        <h3>Crowd Prediction System</h3>
-        Predicting public transport crowd using Weather API & Social Media data.
-    </div>
+<h2>Projects</h2>
+
+<div class="card">
+<h3>📌 MSc Project: Public Transportation Crowd Prediction</h3>
+This web application predicts crowd levels using Weather and Location APIs.
+<br>
+<a href="https://crowdpredictions1.netlify.app/" target="_blank" class="button">View Live Project</a>
+</div>
+
+<div class="card">
+<h3>Liver Cancer Prediction System</h3>
+Healthcare prediction system with validated data & analysis.
+</div>
+
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+📍 Coimbatore <br><br>
+📧 akshayaashree2@gmail.com <br><br>
+📞 9655411975 <br><br>
+🔗 LinkedIn: linkedin.com/in/Akshayaa-shree-042579292
+</div>
 </section>
 
 <footer>
-    © 2026 Akshayaa Shree | Portfolio
+© 2026 Akshayaa Shree | Software Testing & ML Portfolio
 </footer>
 
 <script>
-function scrollToSection(){
-    document.getElementById("about").scrollIntoView({behavior:"smooth"});
+const textArray = [
+"Software Testing Enthusiast",
+"Selenium Automation Professional",
+"Python Developer",
+"Machine Learning Explorer"
+];
+
+let index = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect(){
+ if(index >= textArray.length) index = 0;
+
+ let currentText = textArray[index];
+
+ if(!isDeleting){
+ document.getElementById("typing").innerHTML =
+ currentText.substring(0,charIndex++);
+ if(charIndex > currentText.length){
+ isDeleting = true;
+ setTimeout(typeEffect,1000);
+ return;
+ }
+ } else {
+ document.getElementById("typing").innerHTML =
+ currentText.substring(0,charIndex--);
+ if(charIndex == 0){
+  isDeleting = false;
+  index++;
+ }
+ }
+ setTimeout(typeEffect,100);
 }
+typeEffect();
 </script>
 
 </body>
