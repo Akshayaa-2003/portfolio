@@ -65,6 +65,7 @@ margin-bottom:20px;
 
 .hero h1{
 font-size:45px;
+text-shadow:0 0 15px #64ffda;
 }
 
 .typing{
@@ -85,6 +86,19 @@ section:nth-child(even){
 background:#0a192f;
 }
 
+/* Fade-in animation */
+.fade-in{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
+}
+
+.fade-in.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* CARDS */
 .card{
 background:#1c2b45;
 padding:30px;
@@ -92,6 +106,12 @@ margin:25px auto;
 width:85%;
 border-radius:15px;
 box-shadow:0px 8px 25px rgba(0,0,0,0.4);
+transition:transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0px 15px 40px rgba(0,0,0,0.6);
 }
 
 .button{
@@ -157,14 +177,14 @@ background:#112240;
 <a href="Akshayaa_Shree_Resume.pdf" class="button" download>Download Resume</a>
 </div>
 
-<section id="about">
+<section id="about" class="fade-in">
 <h2>About Me</h2>
 <div class="card">
 I am a Computer Science postgraduate fresher seeking an entry-level opportunity as a Software Tester. I have basic knowledge in Manual Testing, SDLC & STLC concepts, Selenium Automation, and Python. I am eager to learn, improve my technical skills, and grow in a professional environment.
 </div>
 </section>
 
-<section id="skills">
+<section id="skills" class="fade-in">
 <h2>Technical Skills</h2>
 <div class="card">
 <div class="skills-list">
@@ -178,7 +198,7 @@ I am a Computer Science postgraduate fresher seeking an entry-level opportunity 
 </div>
 </section>
 
-<section id="projects">
+<section id="projects" class="fade-in">
 <h2>Projects</h2>
 <div class="card">
 <h3>MSc Project – Public Transportation Crowd Prediction</h3>
@@ -190,53 +210,41 @@ View Live Project
 </div>
 </section>
 
-<section id="conferences">
+<section id="conferences" class="fade-in">
 <h2>Conference Presentations</h2>
 
 <div class="card">
 Digital Sector Safeguards – Cyber Security
-<br>
-<a href="YOUR_DRIVE_LINK" target="_blank" class="button">View Certificate</a>
 </div>
 
 <div class="card">
 Artificial Intelligence for Smart Cities – KPR College
-<br>
-<a href="YOUR_DRIVE_LINK" target="_blank" class="button">View Certificate</a>
 </div>
 
 </section>
 
-<section id="certificates">
+<section id="certificates" class="fade-in">
 <h2>Certifications</h2>
 
 <div class="card">
 Cloud Computing – NPTEL
-<br>
-<a href="YOUR_DRIVE_LINK" target="_blank" class="button">View Certificate</a>
 </div>
 
 <div class="card">
 Operating Systems – NPTEL
-<br>
-<a href="YOUR_DRIVE_LINK" target="_blank" class="button">View Certificate</a>
 </div>
 
 <div class="card">
 Software Testing Internship Certificate
-<br>
-<a href="YOUR_DRIVE_LINK" target="_blank" class="button">View Certificate</a>
 </div>
 
 <div class="card">
 Ayotta Technologies Internship Certificate
-<br>
-<a href="YOUR_DRIVE_LINK" target="_blank" class="button">View Certificate</a>
 </div>
 
 </section>
 
-<section id="contact">
+<section id="contact" class="fade-in">
 <h2>Contact</h2>
 <div class="card">
 📍 Chennai <br><br>
@@ -260,34 +268,51 @@ LinkedIn Profile
 </footer>
 
 <script>
-const textArray = [
-"Software Tester"
-];
-
+/* Typing Animation */
+const textArray = ["Software Tester"];
 let charIndex = 0;
 let isDeleting = false;
 
 function typeEffect(){
- let currentText = textArray[0];
+let currentText = textArray[0];
 
- if(!isDeleting){
- document.getElementById("typing").innerHTML =
- currentText.substring(0,charIndex++);
- if(charIndex > currentText.length){
- isDeleting = true;
- setTimeout(typeEffect,1500);
- return;
- }
- } else {
- document.getElementById("typing").innerHTML =
- currentText.substring(0,charIndex--);
- if(charIndex == 0){
-  isDeleting = false;
- }
- }
- setTimeout(typeEffect,100);
+if(!isDeleting){
+document.getElementById("typing").innerHTML =
+currentText.substring(0,charIndex++);
+if(charIndex > currentText.length){
+isDeleting = true;
+setTimeout(typeEffect,1500);
+return;
+}
+} else {
+document.getElementById("typing").innerHTML =
+currentText.substring(0,charIndex--);
+if(charIndex == 0){
+isDeleting = false;
+}
+}
+setTimeout(typeEffect,100);
 }
 typeEffect();
+
+/* Scroll Fade Animation */
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+entries.forEach(entry => {
+if (!entry.isIntersecting) return;
+entry.target.classList.add('show');
+observer.unobserve(entry.target);
+});
+}, appearOptions);
+
+faders.forEach(fader => {
+appearOnScroll.observe(fader);
+});
 </script>
 
 </body>
