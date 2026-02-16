@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akshayaa Shree | Fresher </title>
+<title>Akshayaa Shree | Fresher</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -173,7 +173,8 @@ background:#112240;
 <div class="hero">
 <img src="image2003.jpeg" alt="profile">
 <h1>Akshayaa Shree</h1>
-<div class="typing" id="typing"></div>
+<div class="typing">Fresher</div>
+
 <a href="Akshayaa_Shree_Resume.pdf" target="_blank" class="button">
 View Resume
 </a>
@@ -182,7 +183,7 @@ View Resume
 <section id="about" class="fade-in">
 <h2>About Me</h2>
 <div class="card">
-I am a Computer Science postgraduate fresher seeking an entry-level opportunity as a Software Tester. I have basic knowledge in Manual Testing, SDLC & STLC concepts, Selenium Automation, and Python. I am eager to learn and grow in a professional environment.
+I am a Computer Science postgraduate fresher seeking an entry-level opportunity. I have basic knowledge in Manual Testing, SDLC & STLC concepts, Selenium Automation, Python, and Power BI. I am eager to learn and grow in a professional environment.
 </div>
 </section>
 
@@ -273,33 +274,6 @@ Ayotta Technologies Internship Certificate
 </footer>
 
 <script>
-/* Typing Animation */
-const textArray = ["Software Tester"];
-let charIndex = 0;
-let isDeleting = false;
-
-function typeEffect(){
-let currentText = textArray[0];
-
-if(!isDeleting){
-document.getElementById("typing").innerHTML =
-currentText.substring(0,charIndex++);
-if(charIndex > currentText.length){
-isDeleting = true;
-setTimeout(typeEffect,1500);
-return;
-}
-} else {
-document.getElementById("typing").innerHTML =
-currentText.substring(0,charIndex--);
-if(charIndex == 0){
-isDeleting = false;
-}
-}
-setTimeout(typeEffect,100);
-}
-typeEffect();
-
 /* Scroll Fade Animation */
 const faders = document.querySelectorAll('.fade-in');
 
@@ -318,7 +292,3 @@ appearOnScroll.observe(fader);
 
 </body>
 </html>
-
-
-
-
