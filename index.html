@@ -67,16 +67,42 @@ nav a:hover{
   border:4px solid #6c63ff20;
 }
 
-.hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:50px;
+/* Hero Heading Fade + Slide */
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: headingFade 1.5s ease forwards 0.5s;
 }
 
-.hero p{
-  margin-top:10px;
-  font-size:18px;
-  color:#6c63ff;
+@keyframes headingFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+/* Hero Subtext Typing Effect */
+.hero p {
+  font-size: 18px;
+  color: #6c63ff;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #6c63ff;
+  width: 0;
+  animation: typing 3s steps(40, end) forwards 2s, blink 0.75s step-end infinite 2s;
+}
+
+@keyframes typing {
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
 
 .btn{
   display:inline-block;
@@ -217,7 +243,7 @@ footer{
 <section id="about" class="fade">
 <h2>About Me</h2>
 <div class="card">
-Motivated Computer Science postgraduate seeking an entry-level opportunity in Software Testing. Eager to learn, grow, and contribute to professional projects.
+To secure a challenging position in a reputed organization where I can contribute to the growth of the company while enhancing my professional knowledge and skills. Eager to learn, adapt, and grow in a dynamic work environment. Committed to delivering high-quality work and achieving organizational goals.
 </div>
 </section>
 
