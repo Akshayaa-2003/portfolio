@@ -20,6 +20,8 @@ body{
   background:#f9f9f9;
   color:#333;
   line-height:1.7;
+  position:relative;
+  overflow-x:hidden;
 }
 
 /* NAVBAR */
@@ -56,6 +58,8 @@ nav a:hover{
   align-items:center;
   text-align:center;
   padding:20px;
+  position:relative;
+  z-index:1;
 }
 
 .hero img{
@@ -65,17 +69,38 @@ nav a:hover{
   object-fit:cover;
   margin-bottom:25px;
   border:4px solid #6c63ff20;
+  animation: profilePop 1s ease;
+}
+
+@keyframes profilePop {
+  0% { transform: scale(0); opacity:0; }
+  100% { transform: scale(1); opacity:1; }
 }
 
 .hero h1{
   font-family:'Playfair Display',serif;
   font-size:50px;
+  animation: fadeIn 1.5s ease forwards;
 }
 
 .hero p{
   margin-top:10px;
   font-size:18px;
   color:#6c63ff;
+  display:inline-block;
+  border-right: 2px solid #6c63ff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
 
 .btn{
@@ -93,18 +118,38 @@ nav a:hover{
 .btn:hover{
   background:#6c63ff;
   color:white;
+  box-shadow:0 0 15px #6c63ff80;
 }
 
 /* SECTION */
 section{
   padding:100px 10%;
   text-align:center;
+  position:relative;
 }
 
 section h2{
   font-family:'Playfair Display',serif;
   font-size:32px;
   margin-bottom:40px;
+  position: relative;
+  display: inline-block;
+  cursor: default;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: -8px;
+  background: #6c63ff;
+  transition: 0.3s;
+}
+
+section h2:hover::after {
+  width: 100%;
 }
 
 /* GRID */
@@ -123,6 +168,8 @@ section h2{
   box-shadow:0 8px 25px rgba(0,0,0,0.06);
   transition:all 0.3s ease;
   text-align:left;
+  transform: translateY(30px);
+  opacity: 0;
 }
 
 .card h3{
@@ -148,6 +195,7 @@ section h2{
   border:1px solid #6c63ff;
   border-radius:20px;
   font-size:13px;
+  animation: float 3s ease-in-out infinite alternate;
 }
 
 /* CONTACT LINKS */
@@ -181,6 +229,18 @@ footer{
   transform:translateY(0);
 }
 
+/* KEYFRAMES */
+@keyframes fadeIn {
+  0% { opacity:0; transform: translateY(20px);}
+  100% { opacity:1; transform: translateY(0);}
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-8px); }
+}
+
+/* MEDIA */
 @media(max-width:768px){
   nav{
     padding:20px;
@@ -189,10 +249,30 @@ footer{
     padding:80px 20px;
   }
 }
+
+/* BACKGROUND SHAPES */
+.bg-shape {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(108,99,255,0.1);
+  top: 20%;
+  left: 10%;
+  z-index: 0;
+  animation: move 10s linear infinite alternate;
+}
+
+@keyframes move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
 </style>
 </head>
 
 <body>
+
+<div class="bg-shape"></div> <!-- floating background shape -->
 
 <nav>
 <div><b>Akshayaa Shree</b></div>
@@ -300,17 +380,21 @@ Motivated Computer Science postgraduate seeking an entry-level opportunity in So
 </footer>
 
 <script>
-const faders=document.querySelectorAll('.fade');
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
-});
+// Fade-in & card animations
+const faders = document.querySelectorAll('.fade');
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
 },{threshold:0.2});
-faders.forEach(f=>observer.observe(f));
+
+faders.forEach(f => observer.observe(f));
+cards.forEach(c => observer.observe(c));
 </script>
 
 </body>
 </html>
-
