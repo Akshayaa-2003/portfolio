@@ -80,13 +80,14 @@ color:#6c63ff;
 
 .btn{
 display:inline-block;
-margin-top:30px;
-padding:12px 28px;
+margin-top:20px;
+padding:10px 22px;
 border:1px solid #6c63ff;
 color:#6c63ff;
 text-decoration:none;
 border-radius:30px;
 transition:0.3s;
+font-size:14px;
 }
 
 .btn:hover{
@@ -106,9 +107,32 @@ font-size:35px;
 margin-bottom:40px;
 }
 
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
 /* CARD */
 .card{
-margin-bottom:40px;
+background:#ffffff;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:all 0.3s ease;
+text-align:left;
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:18px;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(0,0,0,0.12);
 }
 
 /* SKILLS */
@@ -134,7 +158,7 @@ background:#f4f4f4;
 margin-top:50px;
 }
 
-/* FADE */
+/* FADE ANIMATION */
 .fade{
 opacity:0;
 transform:translateY(30px);
@@ -144,6 +168,16 @@ transition:1s;
 .fade.show{
 opacity:1;
 transform:translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+nav{
+padding:20px;
+}
+section{
+padding:100px 20px;
+}
 }
 </style>
 </head>
@@ -157,6 +191,7 @@ transform:translateY(0);
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#certificates">Certificates</a>
+<a href="#conferences">Conferences</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
@@ -197,11 +232,47 @@ Motivated Computer Science postgraduate with basic knowledge in Manual Testing, 
 </section>
 
 <section id="certificates" class="fade">
-<h2>Certificates</h2>
-<div class="card">NPTEL – Cloud Computing</div>
-<div class="card">NPTEL – Operating Systems</div>
-<div class="card">Software Testing Internship</div>
-<div class="card">Conference Presentations – Cyber Security & AI</div>
+<h2>Certifications</h2>
+<div class="grid">
+
+<div class="card">
+<h3>NPTEL – Cloud Computing</h3>
+<a href="https://drive.google.com/file/d/1JZBzdx7rBHB2AYKTH167oto7GhpVNu45/view?usp=drivesdk" target="_blank" class="btn">View Certificate</a>
+</div>
+
+<div class="card">
+<h3>NPTEL – Operating Systems</h3>
+<a href="https://drive.google.com/file/d/1y2Wwb8_diNy9T400_TQib5RwOcV-2x6g/view?usp=drivesdk" target="_blank" class="btn">View Certificate</a>
+</div>
+
+<div class="card">
+<h3>Software Testing Internship</h3>
+<a href="https://drive.google.com/file/d/1uNwErE1scouqQXDU0se5-CwX-DbrJcK1/view?usp=drivesdk" target="_blank" class="btn">View Certificate</a>
+</div>
+
+<div class="card">
+<h3>Ayotta Technologies Internship</h3>
+<a href="https://drive.google.com/file/d/1KcVYIQKrxu8_UHBTwmABSqPVhwPYhKqA/view?usp=drivesdk" target="_blank" class="btn">View Certificate</a>
+</div>
+
+</div>
+</section>
+
+<section id="conferences" class="fade">
+<h2>Conference Presentations</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Digital Sector Safeguards – Cyber Security</h3>
+<a href="https://drive.google.com/file/d/1JCJ8Lwr_reVYVvP1EdTaiHBEkwWCAVyG/view?usp=drivesdk" target="_blank" class="btn">View Certificate</a>
+</div>
+
+<div class="card">
+<h3>Artificial Intelligence for Smart Cities – KPR College</h3>
+<a href="https://drive.google.com/file/d/1RhTbsaa9wtFQHif0qR5Qu903SndRHvox/view?usp=drivesdk" target="_blank" class="btn">View Certificate</a>
+</div>
+
+</div>
 </section>
 
 <section id="contact" class="fade">
@@ -210,7 +281,7 @@ Motivated Computer Science postgraduate with basic knowledge in Manual Testing, 
 📍 Chennai <br><br>
 📧 akshayaashree2@gmail.com <br><br>
 📞 9655411975 <br><br>
-🔗 LinkedIn Profile
+🔗 <a href="https://www.linkedin.com/in/Akshayaa-shree-042579292" target="_blank">LinkedIn Profile</a>
 </div>
 </section>
 
