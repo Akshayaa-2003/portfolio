@@ -5,207 +5,189 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akshayaa Shree | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-font-family:'Poppins',sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
 }
 
 body{
-background:#f9f9ff;
-color:#333;
+  background:#f9f9f9;
+  color:#333;
+  line-height:1.7;
 }
 
 /* NAVBAR */
 nav{
-position:fixed;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-background:white;
-box-shadow:0 4px 15px rgba(0,0,0,0.05);
-z-index:1000;
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 10%;
+  background:white;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  z-index:1000;
 }
 
 nav a{
-text-decoration:none;
-color:#444;
-margin-left:25px;
-font-weight:500;
-transition:0.3s;
+  text-decoration:none;
+  color:#333;
+  margin-left:25px;
+  font-weight:500;
+  transition:0.3s;
 }
 
 nav a:hover{
-color:#7b68ee;
+  color:#6c63ff;
 }
 
 /* HERO */
 .hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(to right,#f9f9ff,#f1f0ff);
-padding:20px;
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
 }
 
 .hero img{
-width:170px;
-height:170px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:25px;
-box-shadow:0 8px 25px rgba(123,104,238,0.2);
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:25px;
+  border:4px solid #6c63ff20;
 }
 
 .hero h1{
-font-family:'Playfair Display',serif;
-font-size:48px;
-margin-bottom:10px;
+  font-family:'Playfair Display',serif;
+  font-size:50px;
 }
 
-.typing{
-color:#7b68ee;
-font-size:18px;
-min-height:24px;
-}
-
-.cursor{
-display:inline-block;
-width:2px;
-background:#7b68ee;
-margin-left:5px;
-animation:blink 0.7s infinite;
-}
-
-@keyframes blink{
-0%{opacity:1;}
-50%{opacity:0;}
-100%{opacity:1;}
+.hero p{
+  margin-top:10px;
+  font-size:18px;
+  color:#6c63ff;
 }
 
 .btn{
-display:inline-block;
-margin-top:15px;
-padding:10px 25px;
-border-radius:25px;
-background:#7b68ee;
-color:white;
-text-decoration:none;
-font-size:14px;
-transition:0.3s;
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 22px;
+  border:1px solid #6c63ff;
+  color:#6c63ff;
+  text-decoration:none;
+  border-radius:30px;
+  transition:0.3s;
+  font-size:14px;
 }
 
 .btn:hover{
-background:#5a4ed1;
+  background:#6c63ff;
+  color:white;
 }
 
-/* SECTIONS */
+/* SECTION */
 section{
-padding:110px 10%;
-text-align:center;
+  padding:100px 10%;
+  text-align:center;
 }
 
 section h2{
-font-family:'Playfair Display',serif;
-font-size:30px;
-margin-bottom:40px;
-position:relative;
+  font-family:'Playfair Display',serif;
+  font-size:32px;
+  margin-bottom:40px;
 }
 
-section h2::after{
-content:"";
-width:60px;
-height:3px;
-background:#7b68ee;
-display:block;
-margin:10px auto 0;
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-top:40px;
 }
 
 /* CARD */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+.card{
+  background:#ffffff;
+  padding:25px 20px;
+  border-radius:12px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.06);
+  transition:all 0.3s ease;
+  text-align:left;
 }
 
-.card{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
-transition:0.3s;
-text-align:left;
+.card h3{
+  margin-bottom:12px;
+  font-size:17px;
 }
 
 .card:hover{
-transform:translateY(-6px);
-box-shadow:0 15px 35px rgba(0,0,0,0.1);
+  transform:translateY(-6px);
+  box-shadow:0 12px 35px rgba(0,0,0,0.1);
 }
 
 /* SKILLS */
 .skills{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:12px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
 }
 
 .skill{
-padding:8px 18px;
-background:white;
-border-radius:20px;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
-font-size:13px;
+  padding:8px 18px;
+  border:1px solid #6c63ff;
+  border-radius:20px;
+  font-size:13px;
 }
 
-/* CONTACT */
+/* CONTACT LINKS */
 .contact a{
-color:#7b68ee;
-text-decoration:none;
-font-weight:500;
+  text-decoration:none;
+  color:#6c63ff;
+  font-weight:500;
 }
 
 .contact a:hover{
-text-decoration:underline;
+  text-decoration:underline;
 }
 
 /* FOOTER */
 footer{
-text-align:center;
-padding:25px;
-background:white;
-margin-top:50px;
+  text-align:center;
+  padding:25px;
+  background:#f4f4f4;
+  margin-top:40px;
 }
 
 /* FADE ANIMATION */
 .fade{
-opacity:0;
-transform:translateY(30px);
-transition:1s ease;
+  opacity:0;
+  transform:translateY(30px);
+  transition:1s ease;
 }
 
 .fade.show{
-opacity:1;
-transform:translateY(0);
+  opacity:1;
+  transform:translateY(0);
 }
 
 @media(max-width:768px){
-nav{
-padding:20px;
-}
-section{
-padding:90px 20px;
-}
+  nav{
+    padding:20px;
+  }
+  section{
+    padding:80px 20px;
+  }
 }
 </style>
 </head>
@@ -219,7 +201,7 @@ padding:90px 20px;
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#internships">Internships</a>
-<a href="#certifications">Certifications</a>
+<a href="#certifications">Certificates</a>
 <a href="#conferences">Conferences</a>
 <a href="#contact">Contact</a>
 </div>
@@ -228,38 +210,35 @@ padding:90px 20px;
 <div class="hero">
 <img src="image2003.jpeg" alt="profile">
 <h1>Akshayaa Shree</h1>
-
-<div class="typing">
-<span id="typed-text"></span><span class="cursor"></span>
-</div>
-
+<p>Computer Science Postgraduate | Fresher</p>
 <a href="Akshayaa_Shree_Resume.pdf" target="_blank" class="btn">View Resume</a>
-<a href="Akshayaa_Shree_Resume.pdf" download class="btn">Download Resume</a>
 </div>
 
 <section id="about" class="fade">
 <h2>About Me</h2>
 <div class="card">
-Enthusiastic and self-motivated Computer Science postgraduate seeking an entry-level opportunity to start my professional career. Passionate about learning new technologies and contributing effectively in a growth-oriented organization.
+Motivated Computer Science postgraduate seeking an entry-level opportunity in Software Testing. Eager to learn, grow, and contribute to professional projects.
 </div>
 </section>
 
 <section id="skills" class="fade">
-<h2>Skills</h2>
+<h2>Technical Skills</h2>
 <div class="skills">
 <div class="skill">Manual Testing</div>
 <div class="skill">Selenium (Basic)</div>
 <div class="skill">Python (Basic)</div>
 <div class="skill">Power BI</div>
-<div class="skill">SDLC & STLC</div>
+<div class="skill">SDLC (Basic)</div>
+<div class="skill">Test Case Writing</div>
+<div class="skill">Bug Reporting</div>
 </div>
 </section>
 
 <section id="projects" class="fade">
-<h2>Project</h2>
+<h2>Projects</h2>
 <div class="card">
 <h3>MSc Project – Public Transportation Crowd Prediction</h3>
-<p>Web application integrating real-time APIs to predict transportation crowd levels.</p>
+<p>Web-based application integrating real-time APIs to predict crowd levels.</p>
 <a href="https://crowdpredictions1.netlify.app/" target="_blank" class="btn">View Project</a>
 </div>
 </section>
@@ -269,11 +248,11 @@ Enthusiastic and self-motivated Computer Science postgraduate seeking an entry-l
 <div class="grid">
 <div class="card">
 <h3>Software Testing Internship</h3>
-<a href="#" class="btn">View Certificate</a>
+<a href="https://drive.google.com/file/d/1uNwErE1scouqQXDU0se5-CwX-DbrJcK1/view" target="_blank" class="btn">View Certificate</a>
 </div>
 <div class="card">
 <h3>Ayotta Technologies Internship</h3>
-<a href="#" class="btn">View Certificate</a>
+<a href="https://drive.google.com/file/d/1KcVYIQKrxu8_UHBTwmABSqPVhwPYhKqA/view" target="_blank" class="btn">View Certificate</a>
 </div>
 </div>
 </section>
@@ -281,16 +260,28 @@ Enthusiastic and self-motivated Computer Science postgraduate seeking an entry-l
 <section id="certifications" class="fade">
 <h2>Certifications</h2>
 <div class="grid">
-<div class="card"><h3>NPTEL – Cloud Computing</h3></div>
-<div class="card"><h3>NPTEL – Operating Systems</h3></div>
+<div class="card">
+<h3>NPTEL – Cloud Computing</h3>
+<a href="https://drive.google.com/file/d/1JZBzdx7rBHB2AYKTH167oto7GhpVNu45/view" target="_blank" class="btn">View Certificate</a>
+</div>
+<div class="card">
+<h3>NPTEL – Operating Systems</h3>
+<a href="https://drive.google.com/file/d/1y2Wwb8_diNy9T400_TQib5RwOcV-2x6g/view" target="_blank" class="btn">View Certificate</a>
+</div>
 </div>
 </section>
 
 <section id="conferences" class="fade">
 <h2>Conferences</h2>
 <div class="grid">
-<div class="card"><h3>Digital Sector Safeguards – Cyber Security</h3></div>
-<div class="card"><h3>AI for Smart Cities – KPR College</h3></div>
+<div class="card">
+<h3>Digital Sector Safeguards – Cyber Security</h3>
+<a href="https://drive.google.com/file/d/1JCJ8Lwr_reVYVvP1EdTaiHBEkwWCAVyG/view" target="_blank" class="btn">View Certificate</a>
+</div>
+<div class="card">
+<h3>AI for Smart Cities – KPR College</h3>
+<a href="https://drive.google.com/file/d/1RhTbsaa9wtFQHif0qR5Qu903SndRHvox/view" target="_blank" class="btn">View Certificate</a>
+</div>
 </div>
 </section>
 
@@ -298,8 +289,8 @@ Enthusiastic and self-motivated Computer Science postgraduate seeking an entry-l
 <h2>Contact</h2>
 <div class="card contact">
 📍 Chennai <br><br>
-📧 <a href="mailto:akshayaashree2@gmail.com">akshayaashree2@gmail.com</a> <br><br>
-📞 <a href="tel:9655411975">9655411975</a> <br><br>
+📧 <a href="mailto:akshayaashree2@gmail.com">akshayaashree2@gmail.com</a><br><br>
+📞 <a href="tel:9655411975">9655411975</a><br><br>
 🔗 <a href="https://www.linkedin.com/in/Akshayaa-shree-042579292" target="_blank">LinkedIn Profile</a>
 </div>
 </section>
@@ -309,38 +300,6 @@ Enthusiastic and self-motivated Computer Science postgraduate seeking an entry-l
 </footer>
 
 <script>
-/* Typing Effect */
-const textArray = ["Computer Science Postgraduate", "Software Testing Fresher", "Quick Learner"];
-let index = 0;
-let charIndex = 0;
-const typedText = document.getElementById("typed-text");
-
-function typeEffect() {
-if (charIndex < textArray[index].length) {
-typedText.textContent += textArray[index].charAt(charIndex);
-charIndex++;
-setTimeout(typeEffect, 80);
-} else {
-setTimeout(eraseEffect, 1500);
-}
-}
-
-function eraseEffect() {
-if (charIndex > 0) {
-typedText.textContent = textArray[index].substring(0, charIndex - 1);
-charIndex--;
-setTimeout(eraseEffect, 50);
-} else {
-index = (index + 1) % textArray.length;
-setTimeout(typeEffect, 200);
-}
-}
-
-document.addEventListener("DOMContentLoaded", function(){
-typeEffect();
-});
-
-/* Scroll Fade */
 const faders=document.querySelectorAll('.fade');
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
