@@ -37,10 +37,18 @@ color:white;
 text-decoration:none;
 margin-left:20px;
 font-weight:500;
+transition:0.3s;
 }
 
 nav a:hover{
 color:#64ffda;
+}
+
+/* ACTIVE NAV LINK */
+nav a.active{
+color:#64ffda;
+border-bottom:2px solid #64ffda;
+padding-bottom:4px;
 }
 
 /* HERO */
@@ -287,6 +295,28 @@ observer.unobserve(entry.target);
 
 faders.forEach(fader => {
 appearOnScroll.observe(fader);
+});
+
+/* Active Navbar Highlight */
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+let current = "";
+
+sections.forEach(section => {
+const sectionTop = section.offsetTop - 150;
+if(pageYOffset >= sectionTop){
+current = section.getAttribute("id");
+}
+});
+
+navLinks.forEach(link => {
+link.classList.remove("active");
+if(link.getAttribute("href") === "#" + current){
+link.classList.add("active");
+}
+});
 });
 </script>
 
