@@ -5,21 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akshayaa Shree | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#ffffff;
+background:#f9f9ff;
 color:#333;
-line-height:1.7;
 }
 
 /* NAVBAR */
@@ -31,20 +30,20 @@ justify-content:space-between;
 align-items:center;
 padding:20px 10%;
 background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+box-shadow:0 4px 15px rgba(0,0,0,0.05);
 z-index:1000;
 }
 
 nav a{
 text-decoration:none;
-color:#333;
+color:#444;
 margin-left:25px;
 font-weight:500;
 transition:0.3s;
 }
 
 nav a:hover{
-color:#6c63ff;
+color:#7b68ee;
 }
 
 /* HERO */
@@ -55,83 +54,87 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+background:linear-gradient(to right,#f9f9ff,#f1f0ff);
 padding:20px;
 }
 
 .hero img{
-width:180px;
-height:180px;
+width:170px;
+height:170px;
 border-radius:50%;
 object-fit:cover;
 margin-bottom:25px;
-border:4px solid #6c63ff20;
+box-shadow:0 8px 25px rgba(123,104,238,0.2);
 }
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:50px;
+font-size:48px;
 }
 
 .hero p{
-margin-top:10px;
+margin-top:8px;
 font-size:18px;
-color:#6c63ff;
+color:#7b68ee;
 }
 
 .btn{
 display:inline-block;
 margin-top:20px;
-padding:10px 22px;
-border:1px solid #6c63ff;
-color:#6c63ff;
+padding:10px 25px;
+border-radius:25px;
+background:#7b68ee;
+color:white;
 text-decoration:none;
-border-radius:30px;
-transition:0.3s;
 font-size:14px;
+transition:0.3s;
 }
 
 .btn:hover{
-background:#6c63ff;
-color:white;
+background:#5a4ed1;
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
-padding:120px 10%;
+padding:110px 10%;
 text-align:center;
 }
 
 section h2{
 font-family:'Playfair Display',serif;
-font-size:32px;
+font-size:30px;
 margin-bottom:40px;
+position:relative;
 }
 
-/* GRID */
+section h2::after{
+content:"";
+width:60px;
+height:3px;
+background:#7b68ee;
+display:block;
+margin:10px auto 0;
+}
+
+/* CARD DESIGN */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+gap:25px;
 }
 
-/* CARD */
 .card{
-background:#ffffff;
+background:white;
 padding:30px;
-border-radius:12px;
-box-shadow:0 8px 25px rgba(0,0,0,0.06);
-transition:all 0.3s ease;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+transition:0.3s;
 text-align:left;
-}
-
-.card h3{
-margin-bottom:12px;
-font-size:17px;
 }
 
 .card:hover{
 transform:translateY(-6px);
-box-shadow:0 12px 35px rgba(0,0,0,0.1);
+box-shadow:0 15px 35px rgba(0,0,0,0.1);
 }
 
 /* SKILLS */
@@ -144,15 +147,16 @@ gap:12px;
 
 .skill{
 padding:8px 18px;
-border:1px solid #6c63ff;
+background:white;
 border-radius:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
 font-size:13px;
 }
 
-/* CONTACT LINKS */
+/* CONTACT */
 .contact a{
+color:#7b68ee;
 text-decoration:none;
-color:#6c63ff;
 font-weight:500;
 }
 
@@ -164,8 +168,8 @@ text-decoration:underline;
 footer{
 text-align:center;
 padding:25px;
-background:#f5f5f5;
-margin-top:40px;
+background:white;
+margin-top:50px;
 }
 
 /* ANIMATION */
@@ -185,7 +189,7 @@ nav{
 padding:20px;
 }
 section{
-padding:100px 20px;
+padding:90px 20px;
 }
 }
 </style>
@@ -210,33 +214,32 @@ padding:100px 20px;
 <img src="image2003.jpeg" alt="profile">
 <h1>Akshayaa Shree</h1>
 <p>Computer Science Postgraduate | Fresher</p>
-<a href="Akshayaa_Shree_Resume.pdf" target="_blank" class="btn">Download Resume</a>
+<a href="Akshayaa_Shree_Resume.pdf" download class="btn">Download Resume</a>
 </div>
 
 <section id="about" class="fade">
 <h2>About Me</h2>
 <div class="card">
-Motivated Computer Science postgraduate with basic knowledge in Manual Testing, Selenium, Python, SDLC & STLC concepts. Seeking an entry-level opportunity to grow and contribute effectively.
+Enthusiastic and self-motivated Computer Science postgraduate seeking an entry-level opportunity to start my professional career. Passionate about learning new technologies and contributing effectively in a growth-oriented organization.
 </div>
 </section>
 
 <section id="skills" class="fade">
-<h2>Technical Skills</h2>
+<h2>Skills</h2>
 <div class="skills">
 <div class="skill">Manual Testing</div>
 <div class="skill">Selenium (Basic)</div>
 <div class="skill">Python (Basic)</div>
 <div class="skill">Power BI</div>
-<div class="skill">Test Case Writing</div>
-<div class="skill">Bug Reporting</div>
+<div class="skill">SDLC & STLC</div>
 </div>
 </section>
 
 <section id="projects" class="fade">
-<h2>Projects</h2>
+<h2>Project</h2>
 <div class="card">
 <h3>MSc Project – Public Transportation Crowd Prediction</h3>
-<p>Web-based application integrating real-time APIs to predict crowd levels.</p>
+<p>Developed a web application integrating real-time APIs to predict transportation crowd levels.</p>
 <a href="https://crowdpredictions1.netlify.app/" target="_blank" class="btn">View Project</a>
 </div>
 </section>
@@ -290,14 +293,9 @@ Motivated Computer Science postgraduate with basic knowledge in Manual Testing, 
 <h2>Contact</h2>
 <div class="card contact">
 📍 Chennai <br><br>
-
 📧 <a href="mailto:akshayaashree2@gmail.com">akshayaashree2@gmail.com</a> <br><br>
-
 📞 <a href="tel:9655411975">9655411975</a> <br><br>
-
-🔗 <a href="https://www.linkedin.com/in/Akshayaa-shree-042579292" target="_blank">
-LinkedIn Profile
-</a>
+🔗 <a href="https://www.linkedin.com/in/Akshayaa-shree-042579292" target="_blank">LinkedIn Profile</a>
 </div>
 </section>
 
